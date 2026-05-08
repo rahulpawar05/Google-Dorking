@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-nav">
+        <a href="https://gmail.com">Gmail</a>
+        <a href="https://images.google.com">Images</a>
+        <i class="fa-solid fa-bars nav-icon"></i>
+        
+        <img src="https://ui-avatars.com/api/?name=Hack+With+Dev&background=0D8ABC&color=fff&size=128" 
+             alt="Profile" 
+             class="profile-img" 
+             title="HackWithDev User">
+    </div>
+
+    <div class="main-container">
+        
+        <div class="logo">
+            <span style="color:var(--g-blue)">H</span>
+            <span style="color:var(--g-red)">a</span>
+            <span style="color:var(--g-yellow)">c</span>
+            <span style="color:var(--g-blue)">k</span>
+            <span style="color:var(--g-green)">W</span>
+            <span style="color:var(--g-red)">i</span>
+            <span style="color:var(--g-yellow)">t</span>
+            <span style="color:var(--g-blue)">h</span>
+            <span style="color:var(--g-green)">R</span>
+            <span style="color:var(--g-red)">a</span>
+            <span style="color:var(--g-yellow)">h</span>
+            <span style="color:var(--g-blue)">u</span>
+            <span style="color:var(--g-red)">l</span>
+        </div>
+
+        <div class="search-area">
+            <form id="searchForm">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="queryInput" autocomplete="off">
+                    <i class="fa-solid fa-microphone mic-icon"></i>
+                    <i class="fa-solid fa-camera lens-icon"></i>
+                </div>
+                
+                <div class="buttons-area">
+                    <button type="submit" class="g-btn">Google Search</button>
+                    <button type="button" class="g-btn" id="luckyBtn">I'm Feeling Lucky</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="file-type-selector">
+            <span>Look for:</span>
+            <a class="type-link active" data-type="video">Movies</a>
+            <a class="type-link" data-type="audio">Music</a>
+            <a class="type-link" data-type="book">Books</a>
+            <a class="type-link" data-type="software">Apps/Games</a>
+            <a class="type-link" data-type="all">Anything</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-location">Made by HackWithDev</div>
+        <div class="footer-links">
+            <div class="link-group">
+                <a href="#">About</a>
+                <a href="#">Advertising</a>
+                <a href="#">Business</a>
+                <a href="#">How Search works</a>
+            </div>
+            <div class="link-group">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
