@@ -132,6 +132,34 @@ body {
     text-align: center;
 }
 
+.engine-row {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--gray-text);
+}
+
+.engine-row select {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 13px;
+    color: var(--text-color);
+    background: #ffffff;
+}
+
+.advanced-controls {
+    margin-top: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
 .g-btn {
     background-color: var(--hover-bg);
     border: 1px solid #f8f9fa;
@@ -156,6 +184,74 @@ body {
     margin-top: 25px;
     font-size: 13px;
     color: #3c4043;
+}
+
+.advanced-panel {
+    margin-top: 18px;
+    width: 100%;
+    max-width: 680px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 16px;
+    background: #ffffff;
+    box-shadow: 0 1px 6px rgba(32,33,36,.15);
+    display: none;
+}
+
+.advanced-panel.open {
+    display: block;
+}
+
+.adv-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.adv-row:last-child {
+    margin-bottom: 0;
+}
+
+.adv-field {
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.adv-field label {
+    font-size: 12px;
+    color: var(--gray-text);
+}
+
+.adv-field input {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.adv-toggles {
+    align-items: center;
+}
+
+.adv-check {
+    font-size: 12px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.adv-check select {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: var(--text-color);
+    background: #ffffff;
 }
 
 .file-type-selector span {
@@ -202,6 +298,7 @@ body {
 @media (max-width: 650px) {
     .logo { font-size: 3rem; }
     .search-area { width: 90%; }
+    .advanced-panel { width: 92%; }
     .footer-links { justify-content: center; gap: 15px; }
     .link-group { width: 100%; text-align: center; margin-bottom: 10px; }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google</title>
+    <title>Open Directory Search</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -42,25 +42,95 @@
             <form id="searchForm">
                 <div class="search-bar">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" id="queryInput" autocomplete="off">
+                    <input type="text" id="queryInput" autocomplete="off" placeholder="Search movies or videos, e.g. public domain film mkv">
                     <i class="fa-solid fa-microphone mic-icon"></i>
                     <i class="fa-solid fa-camera lens-icon"></i>
                 </div>
+
+                <div class="engine-row">
+                    <label for="engineSelect">Engine</label>
+                    <select id="engineSelect" aria-label="Search engine">
+                        <option value="google" selected>Google</option>
+                        <option value="googol">Googol</option>
+                        <option value="startpage">Startpage</option>
+                        <option value="searx">Searx</option>
+                        <option value="filepursuit">FilePursuit</option>
+                    </select>
+                </div>
                 
                 <div class="buttons-area">
-                    <button type="submit" class="g-btn">Google Search</button>
+                    <button type="submit" class="g-btn">Search</button>
                     <button type="button" class="g-btn" id="luckyBtn">I'm Feeling Lucky</button>
+                </div>
+                <div class="advanced-controls">
+                    <button type="button" class="g-btn" id="advToggle">Advanced</button>
+                    <button type="button" class="g-btn" id="advClear">Clear Advanced</button>
                 </div>
             </form>
         </div>
 
+        <div class="advanced-panel" id="advancedPanel" aria-hidden="true">
+            <div class="adv-row">
+                <div class="adv-field">
+                    <label for="exactInput">Exact phrase</label>
+                    <input type="text" id="exactInput" placeholder="exact phrase">
+                </div>
+                <div class="adv-field">
+                    <label for="anyInput">Any of these words</label>
+                    <input type="text" id="anyInput" placeholder="word1, word2">
+                </div>
+            </div>
+            <div class="adv-row">
+                <div class="adv-field">
+                    <label for="noneInput">None of these words</label>
+                    <input type="text" id="noneInput" placeholder="spam, fake">
+                </div>
+                <div class="adv-field">
+                    <label for="siteInput">Site or domain</label>
+                    <input type="text" id="siteInput" placeholder="example.com">
+                </div>
+            </div>
+            <div class="adv-row">
+                <div class="adv-field">
+                    <label for="inurlInput">In URL</label>
+                    <input type="text" id="inurlInput" placeholder="download, index">
+                </div>
+                <div class="adv-field">
+                    <label for="intitleInput">In title</label>
+                    <input type="text" id="intitleInput" placeholder="index of">
+                </div>
+            </div>
+            <div class="adv-row">
+                <div class="adv-field">
+                    <label for="customExtInput">Custom extensions</label>
+                    <input type="text" id="customExtInput" placeholder="mkv, mp4, mp3, pdf">
+                </div>
+                <div class="adv-field">
+                    <label for="extraInput">Extra operators</label>
+                    <input type="text" id="extraInput" placeholder="intext:&quot;parent directory&quot; -site:example.com">
+                </div>
+            </div>
+            <div class="adv-row adv-toggles">
+                <label class="adv-check"><input type="checkbox" id="indexOfCheck" checked>Include index-of filter</label>
+                <label class="adv-check"><input type="checkbox" id="spamCheck" checked>Include spam exclusions</label>
+                <label class="adv-check"><input type="checkbox" id="categoryExtCheck" checked>Use category extensions</label>
+                <label class="adv-check">Mode
+                    <select id="strictnessSelect" aria-label="Dork strictness">
+                        <option value="smart" selected>Smart</option>
+                        <option value="strict">Strict</option>
+                        <option value="relaxed">Relaxed</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
         <div class="file-type-selector">
             <span>Look for:</span>
-            <a class="type-link active" data-type="video">Movies</a>
-            <a class="type-link" data-type="audio">Music</a>
+            <a class="type-link active" data-type="video">Movies MKV/MP4</a>
+            <a class="type-link" data-type="audio">MP3/Music</a>
             <a class="type-link" data-type="book">Books</a>
             <a class="type-link" data-type="software">Apps/Games</a>
-            <a class="type-link" data-type="all">Anything</a>
+            <a class="type-link" data-type="all">All Files</a>
         </div>
     </div>
 

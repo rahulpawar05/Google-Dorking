@@ -25,14 +25,3 @@ A web-based OSINT tool that mimics the Google homepage interface to perform adva
 ├── index.html    # The main interface
 ├── style.css     # Styling and Google theme colors
 └── script.js     # Search logic and Dork generation
-
-```
----
-```text
-const fileTypes = {
-        video: "mkv|mp4|avi|mov|mpg|wmv|divx|mpeg",
-        audio: "mp3|wav|ac3|ogg|flac|wma|m4a|aac",
-        book:  "MOBI|CBZ|CBR|EPUB|PDF|RTF|DOC|DOCX",
-        software: "exe|iso|dmg|tar|7z|rar|zip|apk",
-        all:   "" 
-    };
