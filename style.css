@@ -1,0 +1,207 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #202124;
+    --gray-text: #70757a;
+    --hover-bg: #f8f9fa;
+    --border-color: #dfe1e5;
+    --footer-bg: #f2f2f2;
+    --g-blue: #4285f4;
+    --g-red: #ea4335;
+    --g-yellow: #fbbc05;
+    --g-green: #34a853;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 13px;
+    height: 60px;
+}
+
+.top-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 15px;
+    line-height: 24px;
+}
+
+.top-nav a:hover {
+    text-decoration: underline;
+}
+
+.nav-icon {
+    margin-left: 20px;
+    color: #5f6368;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.nav-icon:hover {
+    background-color: rgba(60,64,67,0.08);
+}
+
+.profile-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-left: 15px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.profile-img:hover {
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -60px;
+}
+
+.logo {
+    font-size: 5rem;
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+    user-select: none;
+    text-align: center;
+}
+
+.search-area {
+    width: 100%;
+    max-width: 584px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 5px 14px;
+    margin: 0 auto;
+    width: 100%;
+    height: 46px;
+}
+
+.search-bar:hover, .search-bar:focus-within {
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+    border-color: rgba(223,225,229,0);
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin: 0 10px;
+    color: var(--text-color);
+    height: 100%;
+}
+
+.search-icon { color: #9aa0a6; font-size: 16px; }
+.mic-icon { color: var(--g-blue); font-size: 16px; margin-left: 10px; cursor: pointer; }
+.lens-icon { color: var(--g-yellow); font-size: 16px; margin-left: 15px; cursor: pointer; }
+
+.buttons-area {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.g-btn {
+    background-color: var(--hover-bg);
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    margin: 0 4px;
+    padding: 0 16px;
+    height: 36px;
+    min-width: 54px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.g-btn:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+.file-type-selector {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #3c4043;
+}
+
+.file-type-selector span {
+    margin-right: 6px;
+}
+
+.type-link {
+    color: #1a0dab;
+    text-decoration: none;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.type-link:hover { text-decoration: underline; }
+.type-link.active { font-weight: bold; color: var(--text-color); text-decoration: none; cursor: default; }
+
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--gray-text);
+    font-size: 14px;
+}
+
+.footer-location {
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+    font-weight: 500;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+
+.link-group a {
+    color: var(--gray-text);
+    text-decoration: none;
+    margin-right: 27px;
+}
+
+.link-group a:hover { text-decoration: underline; }
+
+@media (max-width: 650px) {
+    .logo { font-size: 3rem; }
+    .search-area { width: 90%; }
+    .footer-links { justify-content: center; gap: 15px; }
+    .link-group { width: 100%; text-align: center; margin-bottom: 10px; }
+}
